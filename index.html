@@ -1,109 +1,117 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-   <meta name="google-site-verification" content="eAquC4gkHCL8JaOWlkoW4shQ6TwQNGzv-WwCGYOHXxs" />
-   <link rel="icon" type="image/png" href="6203.png">
+    <meta name="google-site-verification" content="eAquC4gkHCL8JaOWlkoW4shQ6TwQNGzv-WwCGYOHXxs" />
+    <link rel="icon" type="image/png" href="6203.png">
     <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9383467499039172"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9383467499039172" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حاسبة المعدل الشاملة - مرتضى عزيز</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0f172a; color: white; padding: 20px; text-align: center; }
-        .app { background: #1e293b; padding: 25px; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); max-width: 400px; margin: auto; }
-        h2 { color: #38bdf8; margin-bottom: 5px; }
-        p.subtitle { color: #94a3b8; font-size: 14px; margin-bottom: 20px; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0b0f1a; color: white; padding: 20px; text-align: center; margin: 0; }
         
-        .input-group { display: flex; flex-wrap: wrap; justify-content: space-between; }
-        input { 
-            width: 45%; padding: 12px; margin: 8px 0; 
-            border-radius: 12px; border: 1px solid #334155; 
-            background: #0f172a; color: white; text-align: center; font-size: 16px;
-        }
-        input:focus { border-color: #38bdf8; outline: none; }
+        /* تصميم الهوية والبصمة */
+        .brand-section { margin-bottom: 30px; }
+        .logo-img { width: 100px; height: auto; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); }
+        .brand-title { color: #FFD700; font-size: 28px; margin-top: 10px; font-weight: bold; }
 
-        button { 
+        .app { background: #16213e; padding: 25px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); max-width: 400px; margin: auto; border: 1px solid #1f2937; }
+        
+        /* تنسيق أزرار التبديل */
+        .tab-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        .tab-btn { flex: 1; padding: 12px; border-radius: 15px; border: 2px solid #FFD700; cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 14px; }
+
+        /* الشكل الاحترافي الجديد لحقول المواد */
+        .subject-input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            border-radius: 20px; /* تدوير انسيابي */
+            border: 1.5px solid #2e3a59;
+            background: rgba(26, 34, 56, 0.6); /* شفافية فخمة */
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .subject-input:focus {
+            border-color: #38bdf8;
+            background: #1a2238;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* زر الحساب الرئيسي */
+        .calc-btn { 
             background: #38bdf8; color: #0f172a; border: none; 
-            padding: 15px; border-radius: 12px; 
-            font-weight: bold; width: 100%; cursor: pointer; font-size: 18px; margin-top: 15px;
-            transition: 0.3s;
+            padding: 16px; border-radius: 20px; 
+            font-weight: bold; width: 100%; cursor: pointer; font-size: 18px; margin-top: 10px;
+            transition: 0.3s; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
         }
-        button:active { transform: scale(0.95); }
+        .calc-btn:active { transform: scale(0.96); }
 
-        #result-box { 
-            margin-top: 25px; padding: 15px; border-radius: 15px; 
-            display: none; background: #334155; 
-        }
-        .score { font-size: 32px; color: #38bdf8; font-weight: bold; }
-        .status { font-size: 18px; margin-top: 5px; }
+        /* صندوق النتائج */
+        #result-box { margin-top: 25px; padding: 20px; border-radius: 20px; display: none; background: #1e293b; border: 1px solid #334155; animation: fadeIn 0.5s; }
+        .score-text { font-size: 14px; color: #94a3b8; margin-bottom: 5px; }
+        .score-val { font-size: 42px; color: #FFD700; font-weight: bold; }
         
-        .ad-space { background: #0f172a; padding: 8px; font-size: 11px; color: #475569; margin-bottom: 15px; border-radius: 8px; border: 1px dashed #334155; }
+        .ad-space { background: #0f172a; padding: 10px; font-size: 12px; color: #475569; margin-bottom: 20px; border-radius: 12px; border: 1px dashed #334155; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-<div style="text-align: center; margin-top: 20px;">
-    <img src="esign_20260429_133026_٠٠٠٠.png" alt="MA Logo" style="width: 100px; height: auto; border-radius: 10px;">
-    <h2 style="color: #FFD700; font-family: sans-serif; margin-top: 10px;">MA.Design </h2>
+
+<div class="brand-section">
+    <img src="esign_20260429_133026_٠٠٠٠.png" alt="MA Logo" class="logo-img">
+    <div class="brand-title">MA.Design</div>
 </div>
-    <div class="app">
-        <div class="ad-space">إعلان ممول (مكان الربح)</div>
-        
+
+<div class="app">
+    <div class="ad-space">إعلان ممول (قريباً)</div>
+    
         <h2>حاسبة المعدل</h2>
-        <p class="subtitle">الفرع العلمي - إعداد مرتضى عزيز</p>
 
-        <div class="input-group">
-            <input type="number" id="islamic" placeholder="الإسلامية">
-            <input type="number" id="arabic" placeholder="العربي">
-            <input type="number" id="english" placeholder="الإنكليزي">
-            <input type="number" id="math" placeholder="الرياضيات">
-            <input type="number" id="chem" placeholder="الكيمياء">
-            <input type="number" id="phys" placeholder="الفيزياء">
-            <input type="number" id="bio" placeholder="الأحياء">
-        </div>
-        
-        <button onclick="calculate()">احسب المعدل الآن</button>
-
-        <div id="result-box">
-            <div id="res-text">معدلك النهائي هو:</div>
-            <div id="score-val" class="score">0</div>
-            <div id="status-text" class="status"></div>
-        </div>
+    <div class="tab-container">
+        <button onclick="showSection('scientific')" id="sci-btn" class="tab-btn" style="background: #FFD700; color: #1a1a2e;">الفرع العلمي</button>
+        <button onclick="showSection('literary')" id="lit-btn" class="tab-btn" style="background: transparent; color: #FFD700;">الفرع الأدبي</button>
     </div>
 
-    <script>
-        function calculate() {
-            // جلب كل الدرجات
-            const ids = ['islamic', 'arabic', 'english', 'math', 'chem', 'phys', 'bio'];
-            let total = 0;
-            let count = ids.length;
+    <div id="scientific-section">
+        <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">الفرع العلمي - إعداد مرتضى عزيز</p>
+        <input type="number" class="subject-input sci-input" placeholder="الإسلامية">
+        <input type="number" class="subject-input sci-input" placeholder="العربي">
+        <input type="number" class="subject-input sci-input" placeholder="الإنكليزي">
+        <input type="number" class="subject-input sci-input" placeholder="الرياضيات">
+        <input type="number" class="subject-input sci-input" placeholder="الكيمياء">
+        <input type="number" class="subject-input sci-input" placeholder="الفيزياء">
+        <input type="number" class="subject-input sci-input" placeholder="الأحياء">
+    </div>
 
-            ids.forEach(id => {
-                let val = parseFloat(document.getElementById(id).value) || 0;
-                total += val;
-            });
+    <div id="literary-section" style="display: none;">
+        <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">الفرع الأدبي - إعداد مرتضى عزيز</p>
+        <input type="number" class="subject-input lit-input" placeholder="الإسلامية">
+        <input type="number" class="subject-input lit-input" placeholder="العربي">
+        <input type="number" class="subject-input lit-input" placeholder="الإنكليزي">
+        <input type="number" class="subject-input lit-input" placeholder="التاريخ">
+        <input type="number" class="subject-input lit-input" placeholder="الجغرافيا">
+        <input type="number" class="subject-input lit-input" placeholder="الاقتصاد">
+        <input type="number" class="subject-input lit-input" placeholder="الرياضيات">
+    </div>
+    
+    <button class="calc-btn" onclick="calculateAverage()">احسب المعدل الآن</button>
 
-            let average = total / count;
+    <div id="result-box">
+        <div class="score-text">معدلك النهائي هو:</div>
+        <div id="res-val" class="score-val"></div>
+        <div id="status-text" class="status"></div>
+    </div>
+</div>
 
-            // إظهار صندوق النتائج
-            const resBox = document.getElementById('result-box');
-            const scoreVal = document.getElementById('score-val');
-            const statusText = document.getElementById('status-text');
-
-            resBox.style.display = "block";
-            scoreVal.innerHTML = average.toFixed(2);
-
-            // تحديد الحالة
-            if (average >= 50) {
-                statusText.innerHTML = "تهانينا.. أنت ناجح! 🎉";
-                statusText.style.color = "#4ade80";
-            } else {
-                statusText.innerHTML = "تحتاج اتشد حيلك.. معوض خير 📚";
-                statusText.style.color = "#f87171";
-            }
-        }
-    </script>
-   
-   <div style="background: linear-gradient(90deg, #16213e, #0f3460); border: 1px dashed #FFD700; padding: 20px; border-radius: 15px; margin: 30px auto; max-width: 90%; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+<div style="background: linear-gradient(90deg, #16213e, #0f3460); border: 1px dashed #FFD700; padding: 20px; border-radius: 15px; margin: 30px auto; max-width: 90%; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
     <h3 style="color: #FFD700; margin: 0 0 10px 0; font-family: sans-serif;">🚀 ترقبوا المفاجأة!</h3>
     <p style="color: #e0e0e0; font-size: 16px; margin: 0; line-height: 1.6;">
         نحن نعمل الآن على تطوير تطبيق <span style="color: #FFD700; font-weight: bold;">MA.Design</span> الرسمي لنظام أندرويد. 
@@ -111,14 +119,9 @@
         <small style="color: #888;">سيتم توفيره قريباً على متجر Google Play بمميزات حصرية.</small>
     </p>
    </div>
-   
-<footer style="margin-top: 50px; text-align: center; color: #888; font-family: sans-serif;">
-    <hr style="border: 0.5px solid #333; width: 80%;">
-    <p>جميع الحقوق محفوظة لـ MA.Design &copy; 2026</p> 
-</div>
-   
-</footer>
 
+<footer style="margin-top: 40px; text-align: center; color: #64748b; font-size: 13px;">
+    <p>جميع الحقوق محفوظة لـ MA.Design &copy; 2026</p>
    <div style="text-align: center; margin-top: 20px; padding-bottom: 20px;">
     <a href="privacy.html" style="color: #FFD700; text-decoration: none; font-size: 14px; margin: 0 10px;">سياسة الخصوصية</a>
     
@@ -126,6 +129,66 @@
     
     <a href="about.html" style="color: #FFD700; text-decoration: none; font-size: 14px; margin: 0 10px;">من نحن</a>
 </div>
- 
+
+</footer>
+
+<script>
+    let currentBranch = 'scientific';
+
+    function showSection(branch) {
+        currentBranch = branch;
+        const sciSection = document.getElementById('scientific-section');
+        const litSection = document.getElementById('literary-section');
+        const sciBtn = document.getElementById('sci-btn');
+        const litBtn = document.getElementById('lit-btn');
+
+        if (branch === 'scientific') {
+            sciSection.style.display = 'block';
+            litSection.style.display = 'none';
+            sciBtn.style.background = '#FFD700'; sciBtn.style.color = '#1a1a2e';
+            litBtn.style.background = 'transparent'; litBtn.style.color = '#FFD700';
+        } else {
+            sciSection.style.display = 'none';
+            litSection.style.display = 'block';
+            litBtn.style.background = '#FFD700'; litBtn.style.color = '#1a1a2e';
+            sciBtn.style.background = 'transparent'; sciBtn.style.color = '#FFD700';
+        }
+    }
+
+    function calculateAverage() {
+        let inputs = currentBranch === 'scientific' ? 
+                     document.querySelectorAll('.sci-input') : 
+                     document.querySelectorAll('.lit-input');
+        
+        let sum = 0;
+        let count = 0;
+
+        inputs.forEach(input => {
+            if (input.value !== "") {
+                sum += parseFloat(input.value);
+                count++;
+            }
+        });
+
+        if (count > 0) {
+            let avg = sum / count;
+            document.getElementById('result-box').style.display = 'block';
+            // عرض المعدل بدون أصفار زائدة إذا كان رقماً صحيحاً
+            document.getElementById('res-val').innerText = avg % 1 === 0 ? avg.toFixed(0) : avg.toFixed(2);
+            
+            let status = document.getElementById('status-text');
+            if (avg >= 50) {
+                status.innerText = "تهانينا.. أنت ناجح 🎓🌟";
+                status.style.color = "#4ade80";
+            } else {
+                status.innerText = "تحتاج اتشد حيلك.. معوض خير 📚";
+                status.style.color = "#f87171";
+            }
+        } else {
+            alert("يرجى إدخال الدرجات أولاً!");
+        }
+    }
+</script>
+
 </body>
 </html>
